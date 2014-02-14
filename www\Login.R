@@ -21,7 +21,8 @@ output$uiLogin <- renderUI({
 
 output$pass <- renderText({  
   if (USER$Logged == FALSE) {
-    if (input$Login > 0) {
+    if (!is.null(input$Login)) {
+   if (input$Login > 0) {
       Username <- isolate(input$userName)
       Password <- isolate(input$passwd)
       Id.username <- which(PASSWORD$Brukernavn == Username)
@@ -34,6 +35,7 @@ output$pass <- renderText({
         "User name or password failed!"
       }
     } 
+    }
   }
 })
 
