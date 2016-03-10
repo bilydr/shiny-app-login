@@ -33,5 +33,5 @@ jQuery(function($) {
     }
   });
   Shiny.inputBindings.register(passwordInputBinding, 'shiny.passwordInput');
-})
+});
 

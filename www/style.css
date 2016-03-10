@@ -1,4 +1,4 @@
-div.login { 
+.login { 
   text-align: left;
   position:absolute;
   top: 40%;
@@ -7,7 +7,7 @@ div.login {
   margin-left: -150px;
 } 
 
-div#pass {
+#pass {
   text-align: left;
   font-weight:bold;
   padding-left:2px;
