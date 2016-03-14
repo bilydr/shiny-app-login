@@ -13,7 +13,7 @@
   padding-left:2px;
 }
 
-input#Password {
+#Password {
   -webkit-text-security: disc;
 }
 
