@@ -29,7 +29,7 @@ translateDF <- function(df){
 }
 
 
-ui <- bootstrapPage(theme = shinytheme("united"),
+ui <- fluidPage(theme = shinytheme("united"),
   # Add custom CSS & Javascript;
   tagList(
     tags$head(
@@ -39,7 +39,7 @@ ui <- bootstrapPage(theme = shinytheme("united"),
     )
   ),
   
-  tags$h2("Non-English Character Transliterator"),
+  titlePanel("Non-English Character Transliterator"),
   ## Login module;
   div(class = "login",
       uiOutput("uiLogin"),
@@ -61,7 +61,7 @@ server <- function(input, output, session) {
   observe({
     if (USER$Logged == TRUE) {
       output$sideui <- renderUI({
-        div(
+        wellPanel(
             h4("What is this app for"),
             p("This app allows user to",
             a(href = "https://en.wikipedia.org/wiki/Transliteration",
